@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Urna de Votação - Apuração dos Votos</title>
+</h:head>
+<h:body>
+	<h1>Urna Eletronica - Apuração dos Votos Presidente</h1>
+	<h3>Apuração dos Votos.</h3>
+	<h2>Quantidade de votos de cada candidato:</h2>
+	<h2>Candidato mais votado (eleito):</h2>
+	<h2>Candidato menos votado:</h2>
+	
+	<h1>Urna Eletronica - Apuração dos Votos Governador</h1>
+	<h3>ApuraÃ§Ã£o dos Votos.</h3>
+	<h2>Quantidade de votos de cada candidato:</h2>
+	<h2>Candidato mais votado (eleito):</h2>
+	<h2>Candidato menos votado:</h2>
+	
+	<h1>Urna Eletronica - Apuração dos Votos Prefeito</h1>
+	<h3>Apuraçãoo dos Votos.</h3>
+	<h2>Quantidade de votos de cada candidato:</h2>
+	<h2>Candidato mais votado (eleito):</h2>
+	<h2>Candidato menos votado:</h2>
+	
+	<p:dataTable var="apuracao" value="#{apuracaoBean.apuracao}"> 
+			 
+   			<p:column headerText="Prefeito eleito"> 
+  					  <h:outputText value="#{apuracao.prefeitoVencedor.nome}"/> 
+  				</p:column> 
+  				<p:column headerText="Governador eleito"> 
+ 					  <h:outputText value="#{apuracao.governadorVencedor.nome}"/> 
+   				</p:column> 
+  				<p:column headerText="Presidente eleito"> 
+   					  <h:outputText value="#{apuracao.presidenteVencedpr.nome}"/> 
+   				</p:column> 
+   				<p:column headerText="Prefeito menos votado"> 
+   					  <h:outputText value="#{apuracao.prefeitoMenosVotado.nome}"/> 
+   				</p:column> 
+   				<p:column headerText="Governador menos votado"> 
+   					  <h:outputText value="#{apuracao.governadorMenosVotado.nome}"/> 
+   				</p:column> 
+   				<p:column headerText="Presidente menos votado"> 
+   					  <h:outputText value="#{apuracao.presidenteMenosVotado.nome}"/> 
+   				</p:column> 
+   				<p:column headerText="Votos no total"> 
+   					  <h:outputText value="#{apuracao.NumVotos}"/> 
+   				</p:column> 
+   				<p:column headerText="Votos em Branco"> 
+   					  <h:outputText value="#{apuracao.NumBrancos}"/> 
+				</p:column>
+	</p:dataTable>
+</h:body>
+</html>
